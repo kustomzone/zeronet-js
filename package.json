@@ -1,0 +1,64 @@
+{
+  "name": "zeronet",
+  "version": "0.0.1-alpha13",
+  "description": "ZeroNet JS",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "dependencies": {
+    "bunyan": "^1.8.10",
+    "merge-recursive": "0.0.3",
+    "mockery": "^2.1.0",
+    "peer-id": "^0.8.7",
+    "zeronet-client":     "file:zeronet-client",
+    "zeronet-common":     "file:zeronet-common",
+    "zeronet-crypto":     "file:zeronet-crypto",
+    "zeronet-fileserver": "file:zeronet-fileserver",
+    "zeronet-protocol":   "file:zeronet-protocol",
+    "zeronet-storage-fs": "file:zeronet-storage-fs",
+    "zeronet-swarm":      "file:zeronet-swarm",
+    "zeronet-uiserver":   "file:zeronet-uiserver",
+    "zeronet-zite":       "file:zeronet-zite"
+  },
+  "devDependencies": {
+    "app-module-path": "^2.2.0",
+    "mocha": "^3.4.2",
+    "nyc": "^11.0.3",
+    "pkg": "^4.1.1"
+  },
+  "scripts": {
+    "test": "nyc mocha",
+    "test:watch": "nodemon -x \"DEBUG=zeronet*,libp2p* npm run test || echo\"",
+    "report-coverage": "nyc report --reporter=lcov > coverage.lcov && codecov",
+    "pkg": "bash scripts/pkg.sh",
+    "start": "node zeronet.js"
+  },
+  "keywords": [
+    "zeronet",
+    "js",
+    "p2p"
+  ],
+  "bin": {
+    "zeronet": "zeronet.js"
+  },
+  "pkg": {
+    "scripts": [
+      "node_modules/.bin/bunyan"
+    ],
+    "assets": [
+      "node_modules/zeronet-uiserver/ui/**"
+    ]
+  },
+  "author": "Maciej Krüger <mkg20001@gmail.com>",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkg20001/zeronet-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mkg20001/zeronet-js/issues"
+  },
+  "homepage": "https://github.com/mkg20001/zeronet-js#readme"
+}

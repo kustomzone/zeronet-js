@@ -1,0 +1,35 @@
+{
+  "name": "zeronet-protocol",
+  "version": "0.0.1-alpha13",
+  "description": "ZeroNet protocol",
+  "main": "lib/proto/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "zeronet",
+    "protocol"
+  ],
+  "author": "Maciej Krüger <mkg20001@gmail.com>",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkg20001/zeronet-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mkg20001/zeronet-js/issues"
+  },
+  "homepage": "https://github.com/mkg20001/zeronet-js#readme",
+  "dependencies": {
+    "clone": "^2.1.1",
+    "hypercache": "^0.2.0",
+    "ip": "^1.1.5",
+    "msgpack": "^1.0.2",
+    "pull-pushable": "^2.1.1",
+    "pull-stream": "^3.6.0"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {}
+}
